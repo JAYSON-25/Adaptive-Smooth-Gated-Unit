@@ -1,4 +1,4 @@
-##ASGU: Adaptive Smooth Gated Unit
+<h7>ASGU: Adaptive Smooth Gated Unit</h7>
 
 #About
 ASGU (Adaptive Smooth Gated Unit) is a novel deep learning activation function implemented in PyTorch, designed to enhance neural network performance and stability. It combines the smoothness of the sigmoid function, adaptive gating inspired by Swish, and flexible negative region handling akin to Leaky ReLU, with learnable parameters α and β. This package includes a PyTorch implementation and an example demonstrating its application on the MNIST dataset.
