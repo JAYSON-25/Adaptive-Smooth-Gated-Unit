@@ -95,21 +95,7 @@ Theoretical Analysis: Investigate ASGU's convergence properties and gradient dyn
 
 
 **Example Usage**
-The examples/mnist_example.ipynb Jupyter notebook demonstrates:
-
-ASGU activation function implementation
-
-MLP training and evaluation on MNIST
-
-Visualization of training loss and ASGU vs. ReLU shapes
-
-To run:
-
-Install dependencies.
-
-Execute ASGU.py or the notebook in examples/.
-
-View generated plots (training_loss_comparison.png, activation_function_shapes_comparison.png).
+https://colab.research.google.com/drive/1TKjoP1nPRG1IcpQRzKEMFVcrwA8Bu0K3?usp=sharing
 
 **References**
 Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press.
