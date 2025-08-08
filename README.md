@@ -1,12 +1,13 @@
-<h7>ASGU: Adaptive Smooth Gated Unit</h7>
+<font size="7">***ASGU: Adaptive Smooth Gated Unit***</font>
 
-#About
+**About**
+
 ASGU (Adaptive Smooth Gated Unit) is a novel deep learning activation function implemented in PyTorch, designed to enhance neural network performance and stability. It combines the smoothness of the sigmoid function, adaptive gating inspired by Swish, and flexible negative region handling akin to Leaky ReLU, with learnable parameters α and β. This package includes a PyTorch implementation and an example demonstrating its application on the MNIST dataset.
 Note: This project is unrelated to other repositories named "ASGU" (e.g., AnarxismuS/ASGU), which focus on different domains. This ASGU is specifically a deep learning activation function.
 
 
 
-#Comparison with Other Activation Functions
+**Comparison with Other Activation Functions**
 ASGU distinguishes itself from other activation functions through:
 
 ReLU: ReLU suffers from the dying neuron problem due to zero gradients for negative inputs. ASGU mitigates this with a learnable 
@@ -15,7 +16,7 @@ beta slope.
 #Mathematical Definition
 The ASGU activation function is defined as:
 
-##f(x)=x⋅σ(αx)+βx⋅(1−σ(αx))
+**f(x)=x⋅σ(αx)+βx⋅(1−σ(αx))**
 
 Where:
 
@@ -29,9 +30,9 @@ x: Input to the neuron
 
 This can be rewritten as:
 
-##f(x)=x⋅[β+(1−β)⋅σ(αx)]
+**f(x)=x⋅[β+(1−β)⋅σ(αx)]**
 
-#Behavior
+**Behavior**
 For large positive x, f(x)≈x (slope of 1)
 
 For large negative x, f(x)≈βx (The slope is determined by the learned value of β.)
@@ -44,7 +45,7 @@ beta for fully adaptive behavior across layers and datasets.
 Leaky ReLU: Leaky ReLU uses a fixed negative slope, whereas ASGU's 
 beta is unconstrained, allowing it to dynamically adjust its behavior in the negative region (leaky, reflecting, or zero) based on the data.
 
-#MNIST Comparison Experiment
+**MNIST Comparison Experiment**
 Experimental Setup
 ASGU was evaluated on the MNIST dataset using a three-layer multilayer perceptron (MLP) with 500 hidden units per layer, implemented in PyTorch. The model was trained for 10 epochs with the Adam optimizer (learning rate: 0.001) and cross-entropy loss. The setup compared ASGU (with an unconstrained 
 beta) against ReLU:
@@ -57,7 +58,7 @@ Training: Batch size of 100, shuffled training data.
 
 Evaluation: Test loss and accuracy after 10 epochs.
 
-#Results
+**Results**
 
 Training Loss: ASGU achieved lower training loss (0.0176) compared to ReLU (0.0219), indicating better optimization.
 
@@ -81,7 +82,7 @@ Visualizations:
 
 See examples/mnist_example.ipynb for the full experiment code.
 
-#Future Improvements
+**Future Improvements**
 Parameter Initialization: Explore strategies for initializing 
 alpha and 
 beta to enhance convergence speed.
@@ -92,19 +93,8 @@ Scalability: Test ASGU on deeper architectures (e.g., ResNet, Transformer) and l
 
 Theoretical Analysis: Investigate ASGU's convergence properties and gradient dynamics for deeper understanding.
 
-#Installation
-Install dependencies using:
 
-pip install torch torchvision numpy matplotlib
-
-Clone the repository:
-
-git clone https://github.com/YourUsername/ASGU-activation-function.git
-pip install -r requirements.txt
-
-Add the repository root to your PYTHONPATH for module access.
-
-#Example Usage
+**Example Usage**
 The examples/mnist_example.ipynb Jupyter notebook demonstrates:
 
 ASGU activation function implementation
@@ -121,12 +111,12 @@ Execute ASGU.py or the notebook in examples/.
 
 View generated plots (training_loss_comparison.png, activation_function_shapes_comparison.png).
 
-#References
+**References**
 Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press.
 
 Ramachandran, P., Zoph, B., & Le, Q. V. (2017). Searching for Activation Functions. arXiv preprint arXiv:1710.05941.
 
 Maas, A. L., Hannun, A., & Ng, A. Y. (2013). Rectifier Nonlinearities Improve Neural Network Acoustic Models. ICML.
 
-#License
+**License**
 This project is licensed under the MIT License. See the LICENSE file for details.
